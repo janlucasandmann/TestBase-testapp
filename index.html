@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple Footer Recreation</title>
+    <!-- Quick test -->
     <style>
         * {
             margin: 0;
@@ -38,140 +39,118 @@
             margin: 0 auto;
         }
 
-        .apple-footer {
-            background-color: #000000;
-            padding: 40px 0;
-            font-size: 12px;
+        .footer {
+            background-color: #1d1d1f;
+            padding: 20px 0;
         }
 
-        .footer-container {
+        .footer-content {
             max-width: 980px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .footer-content {
+        .footer-directory {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 30px;
-            margin-bottom: 40px;
+            gap: 20px;
+            padding: 40px 0;
+            border-bottom: 1px solid #424245;
         }
 
         .footer-column h3 {
-            color: #d2d2d7;
+            color: #f5f5f7;
             font-size: 12px;
             font-weight: 600;
-            margin-bottom: 12px;
-            letter-spacing: 0.01em;
+            margin-bottom: 10px;
         }
 
         .footer-column ul {
             list-style: none;
         }
 
-        .footer-column li {
+        .footer-column ul li {
             margin-bottom: 8px;
         }
 
-        .footer-column a {
-            color: #d2d2d7;
+        .footer-column ul li a {
+            color: #86868b;
             text-decoration: none;
+            font-size: 12px;
             transition: color 0.3s ease;
         }
 
-        .footer-column a:hover {
+        .footer-column ul li a:hover {
             color: #f5f5f7;
         }
 
-        .footer-bottom {
-            border-top: 1px solid #424245;
-            padding-top: 20px;
-            margin-top: 40px;
+        .footer-shop {
+            padding: 20px 0;
+            border-bottom: 1px solid #424245;
         }
 
-        .footer-shop {
-            margin-bottom: 20px;
+        .footer-shop p {
+            font-size: 12px;
+            margin-bottom: 8px;
         }
 
         .footer-shop a {
-            color: #06c;
+            color: #2997ff;
             text-decoration: none;
+            font-size: 12px;
         }
 
         .footer-shop a:hover {
             text-decoration: underline;
         }
 
-        .footer-legal {
+        .footer-locale {
+            padding: 20px 0;
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            gap: 20px;
-        }
-
-        .footer-copyright {
-            color: #86868b;
-        }
-
-        .footer-links {
-            display: flex;
             flex-wrap: wrap;
             gap: 20px;
         }
 
-        .footer-links a {
-            color: #d2d2d7;
+        .footer-legal {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-legal a {
+            color: #86868b;
             text-decoration: none;
-            padding: 0 10px;
-            border-right: 1px solid #424245;
+            font-size: 12px;
         }
 
-        .footer-links a:last-child {
-            border-right: none;
-        }
-
-        .footer-links a:hover {
+        .footer-legal a:hover {
             color: #f5f5f7;
         }
 
-        .footer-country {
+        .footer-legal span {
+            font-size: 12px;
+        }
+
+        .footer-locale-selector {
             color: #86868b;
+            font-size: 12px;
         }
 
         @media (max-width: 768px) {
-            main h1 {
-                font-size: 32px;
-            }
-
-            main p {
-                font-size: 16px;
-            }
-
-            .footer-content {
+            .footer-directory {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 40px;
             }
-
-            .footer-legal {
+            
+            .footer-locale {
                 flex-direction: column;
                 align-items: flex-start;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
-
-            .footer-links a {
-                border-right: none;
-                padding-left: 0;
             }
         }
 
         @media (max-width: 480px) {
-            .footer-content {
+            .footer-directory {
                 grid-template-columns: 1fr;
             }
         }
@@ -179,13 +158,13 @@
 </head>
 <body>
     <main>
-        <h1>Apple Website Footer Recreation</h1>
-        <p>This is a recreation of the Apple website footer using modern web technologies and responsive design principles.</p>
+        <h1>Welcome to Our Site</h1>
+        <p>This is a recreation of Apple's footer design. Scroll down to see the footer implementation.</p>
     </main>
-    
-    <footer class="apple-footer">
-        <div class="footer-container">
-            <div class="footer-content">
+
+    <footer class="footer">
+        <div class="footer-content">
+            <nav class="footer-directory">
                 <div class="footer-column">
                     <h3>Shop and Learn</h3>
                     <ul>
@@ -202,7 +181,7 @@
                         <li><a href="#">Gift Cards</a></li>
                     </ul>
                 </div>
-
+                
                 <div class="footer-column">
                     <h3>Apple Store</h3>
                     <ul>
@@ -219,27 +198,27 @@
                         <li><a href="#">Shopping Help</a></li>
                     </ul>
                 </div>
-
+                
                 <div class="footer-column">
                     <h3>For Business</h3>
                     <ul>
                         <li><a href="#">Apple and Business</a></li>
                         <li><a href="#">Shop for Business</a></li>
                     </ul>
-                    <h3 style="margin-top: 30px;">For Education</h3>
+                    <h3>For Education</h3>
                     <ul>
                         <li><a href="#">Apple and Education</a></li>
                         <li><a href="#">Shop for K-12</a></li>
                         <li><a href="#">Shop for College</a></li>
                     </ul>
-                    <h3 style="margin-top: 30px;">For Healthcare</h3>
+                    <h3>For Healthcare</h3>
                     <ul>
                         <li><a href="#">Apple in Healthcare</a></li>
                         <li><a href="#">Health on Apple Watch</a></li>
                         <li><a href="#">Health Records on iPhone</a></li>
                     </ul>
                 </div>
-
+                
                 <div class="footer-column">
                     <h3>Apple Values</h3>
                     <ul>
@@ -251,7 +230,10 @@
                         <li><a href="#">Racial Equity and Justice</a></li>
                         <li><a href="#">Supplier Responsibility</a></li>
                     </ul>
-                    <h3 style="margin-top: 30px;">About Apple</h3>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>About Apple</h3>
                     <ul>
                         <li><a href="#">Newsroom</a></li>
                         <li><a href="#">Apple Leadership</a></li>
@@ -262,48 +244,23 @@
                         <li><a href="#">Contact Apple</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-column">
-                    <h3>Entertainment</h3>
-                    <ul>
-                        <li><a href="#">Apple One</a></li>
-                        <li><a href="#">Apple TV+</a></li>
-                        <li><a href="#">Apple Music</a></li>
-                        <li><a href="#">Apple Arcade</a></li>
-                        <li><a href="#">Apple Fitness+</a></li>
-                        <li><a href="#">Apple News+</a></li>
-                        <li><a href="#">Apple Podcasts</a></li>
-                        <li><a href="#">Apple Books</a></li>
-                        <li><a href="#">App Store</a></li>
-                    </ul>
-                    <h3 style="margin-top: 30px;">Apple Wallet</h3>
-                    <ul>
-                        <li><a href="#">Wallet</a></li>
-                        <li><a href="#">Apple Card</a></li>
-                        <li><a href="#">Apple Pay</a></li>
-                        <li><a href="#">Apple Cash</a></li>
-                    </ul>
-                </div>
+            </nav>
+            
+            <div class="footer-shop">
+                <p>More ways to shop: <a href="#">Find an Apple Store</a> or <a href="#">other retailer</a> near you. Or call 1-800-MY-APPLE.</p>
             </div>
-
-            <div class="footer-bottom">
-                <div class="footer-shop">
-                    <p>More ways to shop: <a href="#">Find an Apple Store</a> or <a href="#">other retailer</a> near you. Or call 1-800-MY-APPLE.</p>
-                </div>
+            
+            <div class="footer-locale">
                 <div class="footer-legal">
-                    <div class="footer-copyright">
-                        <p>Copyright © 2023 Apple Inc. All rights reserved.</p>
-                    </div>
-                    <div class="footer-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Use</a>
-                        <a href="#">Sales and Refunds</a>
-                        <a href="#">Legal</a>
-                        <a href="#">Site Map</a>
-                    </div>
-                    <div class="footer-country">
-                        <p>United States</p>
-                    </div>
+                    <span>Copyright © 2024 Apple Inc. All rights reserved.</span>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Sales and Refunds</a>
+                    <a href="#">Legal</a>
+                    <a href="#">Site Map</a>
+                </div>
+                <div class="footer-locale-selector">
+                    <a href="#" style="color: #86868b; text-decoration: none;">United States</a>
                 </div>
             </div>
         </div>
