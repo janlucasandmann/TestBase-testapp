@@ -12,57 +12,44 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             background-color: #000000;
             color: #86868b;
             line-height: 1.5;
-        }
-
-        main {
-            background-color: #1d1d1f;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        main h1 {
-            color: #f5f5f7;
-            font-size: 48px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        main p {
-            color: #86868b;
-            font-size: 18px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .apple-footer {
-            background-color: #000000;
-            padding: 40px 0;
             font-size: 12px;
+            font-weight: 400;
         }
 
-        .footer-container {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 0 20px;
+        .footer-wrapper {
+            background-color: #000000;
+            width: 100%;
         }
 
         .footer-content {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 30px;
-            margin-bottom: 40px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 20px 22px;
+        }
+
+        .footer-directory {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #424245;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
         }
 
         .footer-column h3 {
             color: #d2d2d7;
             font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            letter-spacing: 0.01em;
+            font-weight: 400;
+            margin-bottom: 10px;
         }
 
         .footer-column ul {
@@ -70,122 +57,116 @@
         }
 
         .footer-column li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .footer-column a {
-            color: #d2d2d7;
+            color: #86868b;
             text-decoration: none;
+            font-size: 12px;
             transition: color 0.3s ease;
         }
 
         .footer-column a:hover {
-            color: #f5f5f7;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #424245;
-            padding-top: 20px;
-            margin-top: 40px;
+            color: #ffffff;
         }
 
         .footer-shop {
             margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #424245;
+        }
+
+        .footer-shop p {
+            color: #86868b;
+            font-size: 12px;
+            margin-bottom: 8px;
         }
 
         .footer-shop a {
-            color: #06c;
+            color: #2997ff;
             text-decoration: none;
+            font-size: 12px;
+            transition: text-decoration 0.3s ease;
         }
 
         .footer-shop a:hover {
             text-decoration: underline;
         }
 
+        .footer-locale {
+            margin-bottom: 10px;
+        }
+
+        .footer-locale a {
+            color: #86868b;
+            text-decoration: none;
+            font-size: 12px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-locale a:hover {
+            color: #ffffff;
+        }
+
         .footer-legal {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
             align-items: center;
             gap: 20px;
-        }
-
-        .footer-copyright {
+            font-size: 12px;
             color: #86868b;
         }
 
-        .footer-links {
+        .footer-legal-links {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
+            margin-left: auto;
         }
 
-        .footer-links a {
-            color: #d2d2d7;
-            text-decoration: none;
-            padding: 0 10px;
-            border-right: 1px solid #424245;
-        }
-
-        .footer-links a:last-child {
-            border-right: none;
-        }
-
-        .footer-links a:hover {
-            color: #f5f5f7;
-        }
-
-        .footer-country {
+        .footer-legal a {
             color: #86868b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-legal a:hover {
+            color: #ffffff;
+        }
+
+        .footer-legal-links span {
+            color: #424245;
         }
 
         @media (max-width: 768px) {
-            main h1 {
-                font-size: 32px;
+            .footer-directory {
+                flex-direction: column;
             }
 
-            main p {
-                font-size: 16px;
-            }
-
-            .footer-content {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 40px;
+            .footer-column {
+                min-width: 100%;
+                margin-bottom: 30px;
             }
 
             .footer-legal {
                 flex-direction: column;
                 align-items: flex-start;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                align-items: flex-start;
                 gap: 10px;
             }
 
-            .footer-links a {
-                border-right: none;
-                padding-left: 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .footer-content {
-                grid-template-columns: 1fr;
+            .footer-legal-links {
+                margin-left: 0;
+                flex-direction: column;
+                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
-    <main>
-        <h1>Apple Website Footer Recreation</h1>
-        <p>This is a recreation of the Apple website footer using modern web technologies and responsive design principles.</p>
-    </main>
-    
-    <footer class="apple-footer">
-        <div class="footer-container">
-            <div class="footer-content">
+    <footer class="footer-wrapper">
+        <div class="footer-content">
+            <nav class="footer-directory">
                 <div class="footer-column">
                     <h3>Shop and Learn</h3>
                     <ul>
@@ -202,7 +183,35 @@
                         <li><a href="#">Gift Cards</a></li>
                     </ul>
                 </div>
-
+                <div class="footer-column">
+                    <h3>Apple Wallet</h3>
+                    <ul>
+                        <li><a href="#">Wallet</a></li>
+                        <li><a href="#">Apple Card</a></li>
+                        <li><a href="#">Apple Pay</a></li>
+                        <li><a href="#">Apple Cash</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Account</h3>
+                    <ul>
+                        <li><a href="#">Manage Your Apple ID</a></li>
+                        <li><a href="#">Apple Store Account</a></li>
+                        <li><a href="#">iCloud.com</a></li>
+                    </ul>
+                    <h3 style="margin-top: 30px;">Entertainment</h3>
+                    <ul>
+                        <li><a href="#">Apple One</a></li>
+                        <li><a href="#">Apple TV+</a></li>
+                        <li><a href="#">Apple Music</a></li>
+                        <li><a href="#">Apple Arcade</a></li>
+                        <li><a href="#">Apple Fitness+</a></li>
+                        <li><a href="#">Apple News+</a></li>
+                        <li><a href="#">Apple Podcasts</a></li>
+                        <li><a href="#">Apple Books</a></li>
+                        <li><a href="#">App Store</a></li>
+                    </ul>
+                </div>
                 <div class="footer-column">
                     <h3>Apple Store</h3>
                     <ul>
@@ -219,7 +228,6 @@
                         <li><a href="#">Shopping Help</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-column">
                     <h3>For Business</h3>
                     <ul>
@@ -238,8 +246,12 @@
                         <li><a href="#">Health on Apple Watch</a></li>
                         <li><a href="#">Health Records on iPhone</a></li>
                     </ul>
+                    <h3 style="margin-top: 30px;">For Government</h3>
+                    <ul>
+                        <li><a href="#">Shop for Government</a></li>
+                        <li><a href="#">Shop for Veterans and Military</a></li>
+                    </ul>
                 </div>
-
                 <div class="footer-column">
                     <h3>Apple Values</h3>
                     <ul>
@@ -262,48 +274,25 @@
                         <li><a href="#">Contact Apple</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-column">
-                    <h3>Entertainment</h3>
-                    <ul>
-                        <li><a href="#">Apple One</a></li>
-                        <li><a href="#">Apple TV+</a></li>
-                        <li><a href="#">Apple Music</a></li>
-                        <li><a href="#">Apple Arcade</a></li>
-                        <li><a href="#">Apple Fitness+</a></li>
-                        <li><a href="#">Apple News+</a></li>
-                        <li><a href="#">Apple Podcasts</a></li>
-                        <li><a href="#">Apple Books</a></li>
-                        <li><a href="#">App Store</a></li>
-                    </ul>
-                    <h3 style="margin-top: 30px;">Apple Wallet</h3>
-                    <ul>
-                        <li><a href="#">Wallet</a></li>
-                        <li><a href="#">Apple Card</a></li>
-                        <li><a href="#">Apple Pay</a></li>
-                        <li><a href="#">Apple Cash</a></li>
-                    </ul>
-                </div>
+            </nav>
+            <div class="footer-shop">
+                <p>More ways to shop: <a href="#">Find an Apple Store</a> or <a href="#">other retailer</a> near you. Or call 1-800-MY-APPLE.</p>
             </div>
-
-            <div class="footer-bottom">
-                <div class="footer-shop">
-                    <p>More ways to shop: <a href="#">Find an Apple Store</a> or <a href="#">other retailer</a> near you. Or call 1-800-MY-APPLE.</p>
-                </div>
-                <div class="footer-legal">
-                    <div class="footer-copyright">
-                        <p>Copyright © 2023 Apple Inc. All rights reserved.</p>
-                    </div>
-                    <div class="footer-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Use</a>
-                        <a href="#">Sales and Refunds</a>
-                        <a href="#">Legal</a>
-                        <a href="#">Site Map</a>
-                    </div>
-                    <div class="footer-country">
-                        <p>United States</p>
-                    </div>
+            <div class="footer-locale">
+                <a href="#">United States</a>
+            </div>
+            <div class="footer-legal">
+                <div>Copyright © 2023 Apple Inc. All rights reserved.</div>
+                <div class="footer-legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Terms of Use</a>
+                    <span>|</span>
+                    <a href="#">Sales and Refunds</a>
+                    <span>|</span>
+                    <a href="#">Legal</a>
+                    <span>|</span>
+                    <a href="#">Site Map</a>
                 </div>
             </div>
         </div>
