@@ -17,12 +17,26 @@
             color: #86868b;
             line-height: 1.47059;
             font-size: 12px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .container {
             max-width: 980px;
             margin: 0 auto;
             padding: 0 22px;
+            width: 100%;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d2d2d7;
+            font-size: 48px;
+            font-weight: 600;
         }
 
         footer {
@@ -39,15 +53,15 @@
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 20px;
-            padding: 20px 0;
+            margin-bottom: 40px;
         }
 
         .footer-column h3 {
-            color: #f5f5f7;
+            color: #d2d2d7;
             font-size: 12px;
             font-weight: 600;
             margin-bottom: 12px;
-            letter-spacing: 0.01em;
+            letter-spacing: -0.01em;
         }
 
         .footer-column ul {
@@ -55,7 +69,7 @@
         }
 
         .footer-column li {
-            margin-bottom: 9px;
+            margin-bottom: 8px;
         }
 
         .footer-column a {
@@ -66,66 +80,73 @@
         }
 
         .footer-column a:hover {
-            color: #f5f5f7;
+            color: #ffffff;
+        }
+
+        .footer-more {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #424245;
+        }
+
+        .footer-more p {
+            margin-bottom: 8px;
+        }
+
+        .footer-more a {
+            color: #2997ff;
+            text-decoration: none;
+            transition: text-decoration 0.3s ease;
+        }
+
+        .footer-more a:hover {
             text-decoration: underline;
         }
 
         .footer-bottom {
-            padding: 20px 0;
-            border-top: 1px solid #424245;
-        }
-
-        .footer-shop {
-            margin-bottom: 10px;
-        }
-
-        .footer-shop a {
-            color: #06c;
-            text-decoration: none;
-            font-size: 12px;
-        }
-
-        .footer-shop a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-legal {
             display: flex;
-            flex-wrap: wrap;
+            justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
             gap: 20px;
-            font-size: 12px;
         }
 
         .footer-copyright {
-            margin-right: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .footer-legal-links {
+        .footer-links {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
         }
 
-        .footer-legal-links a {
+        .footer-links a {
             color: #d2d2d7;
             text-decoration: none;
-            padding-right: 20px;
-            border-right: 1px solid #424245;
+            transition: color 0.3s ease;
+            white-space: nowrap;
         }
 
-        .footer-legal-links a:last-child {
-            border-right: none;
-            padding-right: 0;
+        .footer-links a:hover {
+            color: #ffffff;
         }
 
-        .footer-legal-links a:hover {
-            color: #f5f5f7;
-            text-decoration: underline;
+        .footer-links span {
+            color: #424245;
         }
 
-        .footer-country {
-            margin-left: auto;
+        .footer-locale {
+            color: #d2d2d7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-locale:hover {
+            color: #ffffff;
         }
 
         @media (max-width: 768px) {
@@ -133,24 +154,18 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .footer-legal {
+            .footer-bottom {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 10px;
             }
 
-            .footer-country {
-                margin-left: 0;
-            }
-
-            .footer-legal-links {
+            .footer-copyright {
                 flex-direction: column;
-                gap: 10px;
+                align-items: flex-start;
             }
 
-            .footer-legal-links a {
-                border-right: none;
-                padding-right: 0;
+            main {
+                font-size: 32px;
             }
         }
 
@@ -158,10 +173,27 @@
             .footer-directory {
                 grid-template-columns: 1fr;
             }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            main {
+                font-size: 24px;
+                padding: 20px;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
+    <main>
+        <div class="container">
+            Apple Footer
+        </div>
+    </main>
+    
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -182,6 +214,7 @@
                             <li><a href="#">Gift Cards</a></li>
                         </ul>
                     </div>
+                    
                     <div class="footer-column">
                         <h3>Apple Wallet</h3>
                         <ul>
@@ -190,15 +223,17 @@
                             <li><a href="#">Apple Pay</a></li>
                             <li><a href="#">Apple Cash</a></li>
                         </ul>
-                        <h3 style="margin-top: 24px;">Account</h3>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Account</h3>
                         <ul>
                             <li><a href="#">Manage Your Apple ID</a></li>
                             <li><a href="#">Apple Store Account</a></li>
                             <li><a href="#">iCloud.com</a></li>
                         </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3>Entertainment</h3>
+                        
+                        <h3 style="margin-top: 24px;">Entertainment</h3>
                         <ul>
                             <li><a href="#">Apple One</a></li>
                             <li><a href="#">Apple TV+</a></li>
@@ -211,6 +246,7 @@
                             <li><a href="#">App Store</a></li>
                         </ul>
                     </div>
+                    
                     <div class="footer-column">
                         <h3>Apple Store</h3>
                         <ul>
@@ -227,24 +263,28 @@
                             <li><a href="#">Shopping Help</a></li>
                         </ul>
                     </div>
+                    
                     <div class="footer-column">
                         <h3>For Business</h3>
                         <ul>
                             <li><a href="#">Apple and Business</a></li>
                             <li><a href="#">Shop for Business</a></li>
                         </ul>
+                        
                         <h3 style="margin-top: 24px;">For Education</h3>
                         <ul>
                             <li><a href="#">Apple and Education</a></li>
                             <li><a href="#">Shop for K-12</a></li>
                             <li><a href="#">Shop for College</a></li>
                         </ul>
+                        
                         <h3 style="margin-top: 24px;">For Healthcare</h3>
                         <ul>
                             <li><a href="#">Apple in Healthcare</a></li>
                             <li><a href="#">Health on Apple Watch</a></li>
                             <li><a href="#">Health Records on iPhone</a></li>
                         </ul>
+                        
                         <h3 style="margin-top: 24px;">For Government</h3>
                         <ul>
                             <li><a href="#">Shop for Government</a></li>
@@ -252,25 +292,27 @@
                         </ul>
                     </div>
                 </nav>
+                
+                <div class="footer-more">
+                    <p>More ways to shop: <a href="#">Find an Apple Store</a> or <a href="#">other retailer</a> near you. Or call 1-800-MY-APPLE.</p>
+                </div>
+                
                 <div class="footer-bottom">
-                    <div class="footer-shop">
-                        More ways to shop: <a href="#">Find an Apple Store</a> or <a href="#">other retailer</a> near you. Or call 1-800-MY-APPLE.
-                    </div>
-                    <div class="footer-legal">
-                        <div class="footer-copyright">
-                            Copyright © 2024 Apple Inc. All rights reserved.
-                        </div>
-                        <div class="footer-legal-links">
+                    <div class="footer-copyright">
+                        <p>Copyright © 2024 Apple Inc. All rights reserved.</p>
+                        <div class="footer-links">
                             <a href="#">Privacy Policy</a>
+                            <span>|</span>
                             <a href="#">Terms of Use</a>
+                            <span>|</span>
                             <a href="#">Sales and Refunds</a>
+                            <span>|</span>
                             <a href="#">Legal</a>
+                            <span>|</span>
                             <a href="#">Site Map</a>
                         </div>
-                        <div class="footer-country">
-                            United States
-                        </div>
                     </div>
+                    <a href="#" class="footer-locale">United States</a>
                 </div>
             </div>
         </div>
